@@ -1,0 +1,20 @@
+{
+  "name": "@ynab-automation/ynab",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./client": "./src/client.ts",
+    "./constants": "./src/constants.ts",
+    "./schemas": "./src/schemas.ts",
+    "./types": "./src/types.ts",
+    "./milliunits": "./src/milliunits.ts"
+  },
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@ynab-automation/common": "workspace:*",
+    "zod": "^4.4.3"
+  }
+}
