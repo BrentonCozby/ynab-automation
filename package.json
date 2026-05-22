@@ -1,0 +1,45 @@
+{
+  "name": "ynab-automation",
+  "version": "0.1.0",
+  "description": "Personal YNAB automations: categorize Amazon transactions, enrich memos.",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@11.2.2",
+  "volta": {
+    "node": "26.2.0",
+    "pnpm": "11.2.2"
+  },
+  "engines": {
+    "node": ">=26.0.0",
+    "pnpm": ">=11"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "tsc -b",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "categorize": "pnpm --filter @ynab-automation/categorize categorize",
+    "test:categorize": "pnpm --filter @ynab-automation/categorize test:categorize",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.15",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@types/node": "^25.9.1",
+    "@vitest/coverage-v8": "^4.1.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.5",
+    "msw": "^2.14.6",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": "biome check --write --no-errors-on-unmatched"
+  }
+}
