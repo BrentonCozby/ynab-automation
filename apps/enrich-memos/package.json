@@ -1,0 +1,13 @@
+{
+  "name": "@ynab-automation/enrich-memos",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@ynab-automation/common": "workspace:*",
+    "@ynab-automation/ynab": "workspace:*"
+  }
+}
