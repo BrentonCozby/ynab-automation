@@ -1,0 +1,19 @@
+{
+  "name": "@ynab-automation/categorize",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/index.js",
+    "categorize": "tsx src/index.ts",
+    "test:categorize": "tsx src/index.ts --dry-run --verbose"
+  },
+  "dependencies": {
+    "@ynab-automation/common": "workspace:*",
+    "@ynab-automation/ynab": "workspace:*",
+    "dotenv": "^17.4.2",
+    "p-limit": "^7.3.0",
+    "zod": "^4.4.3"
+  }
+}
